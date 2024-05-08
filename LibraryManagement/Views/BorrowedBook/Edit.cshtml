@@ -1,0 +1,49 @@
+﻿@model LibraryManagement.Model.BorrowedBooks
+<form asp-controller="BorrowedBook" asp-action="Edit" method="post" autocomplete="off">
+	<div class="row">
+		<div class="col-12">
+			<input asp-for="BorrowId" hidden/>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">MemberId</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" asp-for="MemberId" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">BookId</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" asp-for="BookId" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">BorrowDate</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" asp-for="BorrowDate" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">ReturnDate</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" asp-for="ReturnDate" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">Status</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" asp-for="Status" required />
+				</div>
+			</div>
+
+
+			<div class="d-flex justify-content-center">
+				<button type="submit" class="btn btn-sm btn-primary me-2">
+					<i class="bi bi-save"></i> Submit
+				</button>
+				<a asp-controller="BorrowedBook" asp-action="Index" class="btn btn-sm btn-secondary">
+					<i class="bi bi-arrow-left-circle"></i> Back
+				</a>
+			</div>
+		</div>
+	</div>
+</form>
+

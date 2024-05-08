@@ -1,0 +1,47 @@
+﻿
+<form asp-controller="Member" asp-action="Create" method="post" autocomplete="off">
+	<div class="row">
+		<div class="col-12">
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">Member Name</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" name="FirstName" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">Last Name</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" name="LastName" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">Email</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" name="Email" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">Phone Number</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" name="PhoneNumber" required />
+				</div>
+			</div>
+			<div class="row mb-2 required">
+				<label class="form-label col-2 fw-bold">Registration Date</label>
+				<div class="col-4">
+					<input type="text" class="form-control form-control-sm" name="Registration Date" required />
+				</div>
+			</div>
+			
+
+			<div class="d-flex justify-content-center">
+				<button type="submit" class="btn btn-sm btn-primary me-2">
+					<i class="bi bi-save"></i> Submit
+				</button>
+				<a asp-controller="Member" asp-action="Index" class="btn btn-sm btn-secondary">
+					<i class="bi bi-arrow-left-circle"></i> Back
+				</a>
+			</div>
+		</div>
+	</div>
+</form>

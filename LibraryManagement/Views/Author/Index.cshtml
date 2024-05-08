@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Authors>
+
+<div class="bg-info text-center mb-4 fw-bold">Author Management</div>
+
+<a asp-controller="Author" asp-action="Create" class="btn btn-primary btn-sm">
+    <i class="bi bi-plus-square"></i> Add Author
+</a>
+
+<div class="table-responsive">
+    <table class="table table-sm table-bordered table-hover mt-3">
+        <thead>
+            <tr>
+                <th>Author Name</th>
+                <th>Bio</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>@data.AuthorName</td>
+                    <td>@data.AuthorBio</td>
+                    <td>
+                        <a asp-controller="Author" asp-action="Edit" asp-route-id="@data.AuthorId" class="btn btn-sm btn-secondary">
+                            <i class="bi bi-arrow-left-circle"></i>Update
+                        </a>
+                        <a asp-controller="Author" asp-action="Delete" asp-route-id="@data.AuthorId" class="btn btn-sm btn-danger">
+                            <i class="bi bi-arrow-left-circle"></i>Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

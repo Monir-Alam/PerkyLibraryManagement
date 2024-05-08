@@ -1,0 +1,53 @@
+﻿
+<form asp-controller="Book" asp-action="Create" method="post" autocomplete="off">
+    <div class="row">
+        <div class="col-12">
+            <div class="row mb-2 required">
+                <label class="form-label col-2 fw-bold">Title</label>
+                <div class="col-4">
+                    <input type="text" class="form-control form-control-sm" name="Title" required />
+                </div>
+            </div>
+            <div class="row mb-2 required">
+                <label class="form-label col-2 fw-bold">ISBN</label>
+                <div class="col-4">
+                    <input type="text" class="form-control form-control-sm" name="ISBN" required />
+                </div>
+            </div>
+            <div class="row mb-2 required">
+                <label class="form-label col-2 fw-bold">AuthorId</label>
+                <div class="col-4">
+                    <input type="text" class="form-control form-control-sm" name="AuthorId" required />
+                </div>
+            </div>
+            <div class="row mb-2 required">
+                <label class="form-label col-2 fw-bold">PublishDate</label>
+                <div class="col-4">
+                    <input type="text" class="form-control form-control-sm" name="PublishDate" required />
+                </div>
+            </div>
+            <div class="row mb-2 required">
+                <label class="form-label col-2 fw-bold">AvailabeCopies</label>
+                <div class="col-4">
+                    <input type="text" class="form-control form-control-sm" name="AvailabeCopies" required />
+                </div>
+            </div>
+            <div class="row mb-2 required">
+                <label class="form-label col-2 fw-bold">TotalCopies</label>
+                <div class="col-4">
+                    <input type="text" class="form-control form-control-sm" name="TotalCopies" required />
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-sm btn-primary me-2">
+                    <i class="bi bi-save"></i> Submit
+                </button>
+                <a asp-controller="Book" asp-action="Index" class="btn btn-sm btn-secondary">
+                    <i class="bi bi-arrow-left-circle"></i> Back
+                </a>
+            </div>
+        </div>
+    </div>
+</form>

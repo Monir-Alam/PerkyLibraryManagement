@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Books>
+
+<div class="bg-info text-center mb-4 fw-bold">Books Management</div>
+
+<a asp-controller="Book" asp-action="Create" class="btn btn-primary btn-sm">
+    <i class="bi bi-plus-square"></i> Add Books
+</a>
+
+<div class="table-responsive">
+    <table class="table table-sm table-bordered table-hover mt-3">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Author Id</th>
+                <th>Publish Date</th>
+                <th>Availabe Copies</th>
+                <th>Total Copies</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>@data.Title</td>
+                    <td>@data.ISBN</td>
+                    <td>@data.AuthorId</td>
+                    <td>@data.PublishDate</td>
+                    <td>@data.AvailabeCopies</td>
+                    <td>@data.TotalCopies</td>
+                    <td>
+                        <a asp-controller="Book" asp-action="Edit" asp-route-id="@data.BookId" class="btn btn-sm btn-secondary">
+                            <i class="bi bi-arrow-left-circle"></i>Update
+                        </a>
+                        <a asp-controller="Book" asp-action="Delete" asp-route-id="@data.BookId" class="btn btn-sm btn-danger">
+                            <i class="bi bi-arrow-left-circle"></i>Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
